@@ -4,33 +4,24 @@ namespace Vente_consoles.Models
 {
     public class Console
     {
-        public int id;
+        public int Id;
         public string nom;
-        public string spec_tech;
-        public string construct;
+        public int manufacturer;
+        private string release_date;
 
-        public Console(int id,string nom,string spec_tech,string construct)
-        {
-            this.id = id;
-            this.nom = nom;
-            this.spec_tech = spec_tech;
-            this.construct = construct;
+        public string Release_date { get => release_date; set => release_date = value; }
 
-        }
-        public int getId() { return id; }
+        
+        public int getId() { return Id; }
         public string getNom() { return nom; }
-        public string getSpec_tech() {  return spec_tech; }
-        public string getConstruct() { return construct; }
-        public int setId(int id) { this.id = id;
+        public int getManufacturer() { return manufacturer; }
+        public int setId(int id) { this.Id = id;
         return id; }
         public string setNom(string nom) { this.nom = nom;
             return nom;
         }
-        public string setSpec_tech(string spec_tech) { this.spec_tech = spec_tech; 
-            return spec_tech; 
-        }
-        public string setConstruct(string construct) { this.construct = construct; 
-            return this.construct; 
+        public int setManufacturer(int manufacturer) { this.manufacturer = manufacturer; 
+            return this.manufacturer; 
         }
 
         
