@@ -13,21 +13,5 @@ namespace Vente_consoles.Models
         public int Id { get; set ; }
         public string Nom { get; set; }
         public int Manufacturer { get; set; }
-
-
-
-        /*public int getId() { return Id; }
-        public string getNom() { return nom; }
-        public int getManufacturer() { return manufacturer; }
-        public int setId(int id) { this.Id = id;
-        return id; }
-        public string setNom(string nom) { this.nom = nom;
-            return nom;
-        }
-        public int setManufacturer(int manufacturer) { this.manufacturer = manufacturer; 
-            return this.manufacturer; 
-        }*/
-
-
     }
 }
