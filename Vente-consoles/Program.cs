@@ -6,10 +6,10 @@ using Vente_consoles.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<Vente_consolesContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("API_BDTNContext") ?? throw new
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Vente_consolesContext") ?? throw new
 InvalidOperationException("Connection string 'Vente_consolesContext' not found.")));
 
-//var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();

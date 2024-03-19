@@ -13,8 +13,9 @@ public static class SeedData
         {
             using (var context = new Vente_consolesContext(
             serviceProvider.GetRequiredService<
-            DbContextOptions<Vente_consolesContext>>()))
+            DbContextOptions<Vente_consolesContext>>() ))
             {
+                context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
                 // S’il y a déjà des films dans la base
                 if (context.Manufacturer.Any())
