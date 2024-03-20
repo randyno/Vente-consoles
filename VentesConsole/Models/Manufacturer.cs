@@ -1,8 +1,11 @@
-﻿namespace VentesConsole.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace VentesConsole.Models
 {
     public class Manufacturer
     {
-        public int Id { get; set; }
+        [Key]
+        public int ManufacturerId { get; set; }
         public string Name { get; set; }
         public string Country { get; set; }
     }
