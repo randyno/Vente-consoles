@@ -47,7 +47,7 @@ namespace VentesConsole.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutManufacturer(int id, Manufacturer manufacturer)
         {
-            if (id != manufacturer.Id)
+            if (id != manufacturer.ManufacturerId)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace VentesConsole.Controllers
             _context.Manufacturer.Add(manufacturer);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetManufacturer", new { id = manufacturer.Id }, manufacturer);
+            return CreatedAtAction("GetManufacturer", new { id = manufacturer.ManufacturerId }, manufacturer);
         }
 
         // DELETE: api/Manufacturers/5
@@ -102,7 +102,7 @@ namespace VentesConsole.Controllers
 
         private bool ManufacturerExists(int id)
         {
-            return _context.Manufacturer.Any(e => e.Id == id);
+            return _context.Manufacturer.Any(e => e.ManufacturerId == id);
         }
     }
 }

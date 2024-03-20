@@ -34,7 +34,7 @@ namespace VentesConsole.Controllers
         {
             var consoleModel = await _context.ConsoleModel.FindAsync(id);
 
-            if (consoleModel == null)
+           if (consoleModel == null)
             {
                 return NotFound();
             }
@@ -47,7 +47,7 @@ namespace VentesConsole.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutConsoleModel(int id, ConsoleModel consoleModel)
         {
-            if (id != consoleModel.Id)
+            if (id != consoleModel.ConsoleId)
             {
                 return BadRequest();
             }
@@ -81,7 +81,7 @@ namespace VentesConsole.Controllers
             _context.ConsoleModel.Add(consoleModel);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetConsoleModel", new { id = consoleModel.Id }, consoleModel);
+            return CreatedAtAction("GetConsoleModel", new { id = consoleModel.ConsoleId }, consoleModel);
         }
 
         // DELETE: api/ConsoleModels/5
@@ -102,7 +102,7 @@ namespace VentesConsole.Controllers
 
         private bool ConsoleModelExists(int id)
         {
-            return _context.ConsoleModel.Any(e => e.Id == id);
+            return _context.ConsoleModel.Any(e => e.ConsoleId == id);
         }
     }
 }
