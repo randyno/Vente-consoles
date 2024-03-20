@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VentesConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47df61c44a92c6ae146205a2590f905a207352f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("VentesConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VentesConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
