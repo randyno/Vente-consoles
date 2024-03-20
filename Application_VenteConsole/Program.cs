@@ -1,6 +1,12 @@
+using Application_VenteConsole.API;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddRazorPages().AddNewtonsoftJson();
+
+builder.Services.AddHttpClient<IManufacturerClient, ManufacturerClient>(client => client.BaseAddress = new Uri(builder.Configuration.GetSection("ManufacturerApi").Value));
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
